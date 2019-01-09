@@ -29,4 +29,4 @@ if __name__ == '__main__':
     assert new_item.getName() == 'Alex'
     assert new_item.getSellIn() == '20'
     assert new_item.getQuality() == '30'
-    assert new_item.updateQuality() == None
+    assert new_item.update_quality() == None

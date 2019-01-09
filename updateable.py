@@ -1,5 +1,5 @@
 class Interface():
 
 
-    def updateQuality(self):
+    def update_quality(self):
         pass
