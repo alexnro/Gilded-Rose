@@ -7,7 +7,7 @@ class AgedBrie(RegularItem):
 
 
     def __init__(self, name, sell_in, quality):
-        Item.__init__(name, sell_in, quality)
+        RegularItem.__init__(self, name, sell_in, quality)
     
 
 
