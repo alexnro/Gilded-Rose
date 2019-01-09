@@ -33,3 +33,10 @@ if __name__ == "__main__":
     stageBack.update_quality()
     assert stageBack.getQuality() == 27
 
+    backsito = Backstage("Backstage", 3, 49)
+    backsito.update_quality()
+    assert backsito.getQuality() == 50
+
+    backson = Backstage("backstage", -2, 30)
+    backson.update_quality()
+    assert backson.getQuality() == 0
