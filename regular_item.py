@@ -10,6 +10,18 @@ class RegularItem(Item, Interface):
         Item.__init__(self, name, sell_in, quality)
     
 
+    def getName(self):
+        return self.name
+
+    
+    def getSellIn(self):
+        return self.sell_in
+    
+
+    def getQuality(self):
+        return self.quality
+
+
     def setSellIn(self):
         self.sell_in -= 1
 
