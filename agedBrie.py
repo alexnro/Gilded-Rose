@@ -28,7 +28,17 @@ if __name__ == "__main__":
     quesitoSandra.update_quality()
     assert quesitoSandra.getQuality() == 50
 
-    quesitocoche = AgedBrie("Coche", 2, 0)
-    quesitocoche.update_quality()
-    assert quesitocoche.getQuality() == 1
-    assert quesitocoche.getSellIn() == 1
+    quesitoCoche = AgedBrie("Coche", 2, 0)
+    quesitoCoche.update_quality()
+    assert quesitoCoche.getQuality() == 1
+    assert quesitoCoche.getSellIn() == 1
+
+    quesitoPortatil = AgedBrie("Portatil", 1, 1)
+    quesitoPortatil.update_quality()
+    assert quesitoPortatil.getQuality() == 2
+    assert quesitoPortatil.getSellIn() == 0
+
+    quesitoRaton = AgedBrie("Raton", 0, 2)
+    quesitoRaton.update_quality()
+    assert quesitoRaton.getQuality() == 4
+    assert quesitoRaton.getSellIn() == -1
