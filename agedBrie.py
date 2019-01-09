@@ -19,26 +19,26 @@ class AgedBrie(RegularItem):
 if __name__ == "__main__":
     
 
-    quesito = AgedBrie("Aged Brie", 2, 0)
-    assert quesito.getName() == "Aged Brie"
-    quesito.update_quality()
-    assert quesito.getQuality() == 1
+    cheese = AgedBrie("Aged Brie", 2, 0)
+    assert cheese.getName() == "Aged Brie"
+    cheese.update_quality()
+    assert cheese.getQuality() == 1
 
-    quesitoSandra = AgedBrie("Sandra", 3, 50)
-    quesitoSandra.update_quality()
-    assert quesitoSandra.getQuality() == 50
+    cheeseTwo = AgedBrie("Sandra", 3, 50)
+    cheeseTwo.update_quality()
+    assert cheeseTwo.getQuality() == 50
 
-    quesitoCoche = AgedBrie("Coche", 2, 0)
-    quesitoCoche.update_quality()
-    assert quesitoCoche.getQuality() == 1
-    assert quesitoCoche.getSellIn() == 1
+    cheeseThree = AgedBrie("Coche", 2, 0)
+    cheeseThree.update_quality()
+    assert cheeseThree.getQuality() == 1
+    assert cheeseThree.getSellIn() == 1
 
-    quesitoPortatil = AgedBrie("Portatil", 1, 1)
-    quesitoPortatil.update_quality()
-    assert quesitoPortatil.getQuality() == 2
-    assert quesitoPortatil.getSellIn() == 0
+    cheeseFour = AgedBrie("Portatil", 1, 1)
+    cheeseFour.update_quality()
+    assert cheeseFour.getQuality() == 2
+    assert cheeseFour.getSellIn() == 0
 
-    quesitoRaton = AgedBrie("Raton", 0, 2)
-    quesitoRaton.update_quality()
-    assert quesitoRaton.getQuality() == 4
-    assert quesitoRaton.getSellIn() == -1
+    cheeseFive = AgedBrie("Raton", 0, 2)
+    cheeseFive.update_quality()
+    assert cheeseFive.getQuality() == 4
+    assert cheeseFive.getSellIn() == -1

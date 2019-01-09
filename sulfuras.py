@@ -24,7 +24,7 @@ if __name__ == "__main__":
     assert sulfuro.getSellIn() == 0
     assert sulfuro.getQuality() == 80
 
-    sulfurito = Sulfuras("Sulfuras", -1, 80)
-    sulfurito.update_quality()
-    assert sulfurito.getQuality() == 80
-    assert sulfurito.getSellIn() == -1
+    sulfurasTest = Sulfuras("Sulfuras", -1, 80)
+    sulfurasTest.update_quality()
+    assert sulfurasTest.getQuality() == 80
+    assert sulfurasTest.getSellIn() == -1
