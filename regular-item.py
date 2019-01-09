@@ -13,15 +13,21 @@ class RegularItem(Item, Interface):
     def setSellIn(self):
         self.sell_in -= 1
 
+
     def setQuality(self, valor):
-        pass
+        if self.quality + valor >= 0:
+            self.quality += valor
+        elif self.quality + valor < 0:
+            self.quality = 0
+        elif self.quality > 50:
+            self.quality = 50
 
 
     def update_quality(self):
         if self.sell_in > 0:
-            self.quality -= 1
+            self.setQuality(-1)
         else:
-            self.quality -= 2
+            self.setQuality(-2)
         self.setSellIn()
 
 
