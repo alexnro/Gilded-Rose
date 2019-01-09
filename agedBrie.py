@@ -13,7 +13,7 @@ class AgedBrie(RegularItem):
             self.setQuality(+1)
         else:
             self.setQuality(+2)
-        self.setSellIn
+        self.setSellIn()
 
 
 if __name__ == "__main__":
@@ -23,3 +23,12 @@ if __name__ == "__main__":
     assert quesito.getName() == "Aged Brie"
     quesito.update_quality()
     assert quesito.getQuality() == 1
+
+    quesitoSandra = AgedBrie("Sandra", 3, 50)
+    quesitoSandra.update_quality()
+    assert quesitoSandra.getQuality() == 50
+
+    quesitocoche = AgedBrie("Coche", 2, 0)
+    quesitocoche.update_quality()
+    assert quesitocoche.getQuality() == 1
+    assert quesitocoche.getSellIn() == 1

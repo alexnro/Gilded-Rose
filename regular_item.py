@@ -15,12 +15,13 @@ class RegularItem(Item, Interface):
 
 
     def setQuality(self, valor):
-        if self.quality + valor >= 0:
+        if self.quality + valor >= 50:
+            self.quality = 50
+        elif self.quality + valor >= 0:
             self.quality += valor
         elif self.quality + valor < 0:
             self.quality = 0
-        elif self.quality > 50:
-            self.quality = 50
+        
 
 
     def update_quality(self):
@@ -42,3 +43,11 @@ if __name__ == "__main__":
     itemSama.update_quality()
     assert itemSama.getQuality() == 4
     assert itemSama.getSellIn() == 9
+
+    itemSandra = RegularItem("Sandra", 5, 55)
+    itemSandra.update_quality()
+    assert itemSandra.getQuality() == 50
+
+    itemAlex = RegularItem("Alex", 2, -2)
+    itemAlex.update_quality()
+    assert itemAlex.getQuality() == 0
